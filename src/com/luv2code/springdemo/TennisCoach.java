@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 @Component // this is the annotation that tells Spring to register this bean
 public class TennisCoach implements Coach {
 	
+	@Autowired
 	private FortuneService fortuneService;
 	
 //	@Autowired // what I'm doing here is that I'm autowiring it instead of telling by ID what dependency to inject with the config file
@@ -17,11 +18,11 @@ public class TennisCoach implements Coach {
 		System.out.println(">> inside default constructor");
 	}
 	
-	@Autowired
-	public void setFortuneService(FortuneService theFortuneService) {
-		System.out.println(">> inside the setFortuneService() method");
-		fortuneService = theFortuneService;
-	}
+//	@Autowired
+//	public void defineFortineService(FortuneService theFortuneService) { // this is a setter method with a different name to test that it works anyway
+//		System.out.println(">> inside the defineFortineService() method");
+//		fortuneService = theFortuneService;
+//	}
 	
 	@Override
 	public String getDailyWorkout() {
