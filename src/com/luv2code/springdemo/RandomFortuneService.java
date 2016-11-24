@@ -18,8 +18,8 @@ public class RandomFortuneService implements FortuneService {
 	@Override
 	public String getFortune() {
 		int index = myRandom.nextInt(data.length);
-		String theFortune = data[index];
-		return theFortune;
+		String myFortune = data[index];
+		return myFortune;
 	}
 
 }
