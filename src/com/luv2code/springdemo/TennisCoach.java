@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class TennisCoach implements Coach {
 	
 	@Autowired
-	@Qualifier("randomFortuneServiceFromFile")
+	@Qualifier("randomFortuneService")
 	private FortuneService fortuneService;
 	
 //	@Autowired // what I'm doing here is that I'm autowiring it instead of telling by ID what dependency to inject with the config file
